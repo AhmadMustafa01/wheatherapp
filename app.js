@@ -6,7 +6,7 @@ const fs = require('fs');
 const bodyparser=require("body-parser");
 app.use(bodyparser.urlencoded({extended:true}));
 app.get("/", function(req, res) {
-  const url = "https://api.openweathermap.org/data/2.5/weather?units=metric&appid=755b2180c65a82ac979b13b77dd3d0d1&q=london";
+  const url = "https://api.openweathermap.org/data/2.5/weather?units=metric&appid=*myid*=london";
   https.get(url, function(response) {
     console.log(response.statusCode);
     response.on("data", function(data) {
